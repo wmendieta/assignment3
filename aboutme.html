@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ProjectAssigment3</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <!-- <script src="https://unpkg.com/vue-router@2.0.0/dist/vue-router.js"></script> -->
+</head>
+<body>
+    <div class="navbar">
+        <div class="container flex">
+            <h1 class="logo">Cocktails!</h1>
+            <nav>
+                <ul>
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="aboutme.html">About me</a></li>
+                    <li><a href="ingredientchecklist.html">Ingredient checklist</a></li>
+                    <li><a href="cocktailgenerator.html">Cocktail generator</a></li>
+                    <li><a href="contactme.html">Contact me</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+    <div class="homeimagestyle">
+        <img src="https://media.timeout.com/images/105631937/image.jpg">
+    </div>
+    <div>
+        <h2>This section is for a description about me and my project</h2>
+    </div>
+
+    <div class="iframe-container">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/dbx3Wpdsm3w" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/1VQ_3sBZEm0?autoplay=1&mute=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
+    </div>
+
+    <!-- Vue data list -->
+   <div id="homevue">
+    <h1>{{header}}</h1>
+
+    <input v-model="newItem" type="text" placeholder="Add an item">
+    <br>
+    <label><input type="radio" v-model="newItemPriority" value="low">Low</label>
+    <label><input type="radio" v-model="newItemPriority" value="high">High</label>
+    <br>
+    {{newItem}} {{newItemPriority}}
+
+    <!-- <ul>
+        <li v-for="ingredient in ingredients" :key="ingredient.id">{{ingredient.label}}</li>
+    </ul>
+     -->
+
+    </div>
+
+    <script src="https://unpkg.com/vue@3"></script>
+
+    <script>
+        const ingredientList = Vue.createApp({
+            data(){
+                return {
+                    header: "Radio Button",
+
+                    newItem: '',
+
+                    newItemPriority: 'low',
+
+                    // ingredients: [
+                    //    {id: 1, label: "lemons"},
+                    //    {id: 2, label: "ice"},
+                    //    {id: 3, label: "mint"},
+                    //    {id: 4, label: "rum"},
+                    // ]
+                }
+            }
+        })
+        .mount('#homevue')
+
+    </script>
+    <div>
+        <h2>The section above is radio button</h2>
+    </div>
+</body>
+</html>

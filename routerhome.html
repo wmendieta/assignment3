@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ProjectWebsite</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <script src="https://unpkg.com/vue-router@2.0.0/dist/vue-router.js"></script>
+    <style>
+         
+    p {
+    width: 100%;
+    text-align: center;
+    background-color: black;
+    height: 40px;
+    padding-top: 1em;
+    font-size: large;
+    word-spacing: 15px;
+    } 
+
+    /* *,*::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: initial;
+    } */
+
+    body {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 1em;
+    
+    /* padding: 1em; */
+    }
+
+    h1 {
+    width: 100%;
+    text-align: center;
+    background-color: darkgray;
+    height: 100px;
+    
+    }
+
+    h2 {
+    float: left;
+    width: 70%;
+    text-align: left;
+    background-color: ghostwhite;
+    height: 250px;
+    padding: 10px;
+    box-sizing: border-box;
+    }
+
+    h3 {
+
+    float: right;
+    width: 30%;
+    text-align: left;
+    background-color: gainsboro;
+    height: 150px;
+    padding: 10px;
+    box-sizing: border-box;
+
+    }
+
+    img {
+    max-width: 100%;
+    
+    }
+    .navibar {
+        overflow: hidden;
+    }
+
+    .navbar:hover {
+        
+        text-decoration: underline;
+        transform: translateY(-5px);
+        /* position: relative; */
+        /* padding-bottom: 0.25em */
+
+        /* display: inline-block;
+        ;
+        position: relative; */
+    }
+
+    .homepagetitle {
+        color:black;
+
+        
+    }
+
+    .homeimagestyle {
+        color: #000;
+
+    }
+
+    .bodystyle {
+        color: cornflowerblue;
+    }
+
+    ul {
+    list-style-type: none;
+    }
+
+    a {
+        text-decoration: none;
+        color: #000;
+    }
+
+    @media all and (min-width: 500px) {
+        
+    
+        h2 {
+            width: 100%;
+            float: none;
+            text-transform: lowercase;
+        }
+
+        h3 {
+            width: 100%;
+            float: none;
+            text-size-adjust: auto;
+        }
+
+    }
+
+    @media all and (max-width: 500px) {
+        
+        h1 {
+            text-transform: capitalize;
+        }
+        img {
+            display: block;
+        }
+    }
+
+  
+
+        /* .navbar::before { */
+            /* text-decoration: underline; */
+            /* content: "";
+            position: absolute; */
+            /* left: 0; comment out */
+            /* right: 0;
+            bottom: 0;
+            width: 0%;
+            height: 2px;
+            background-color: yellow;
+            transition: width 0.25s ease-out;
+        } */
+
+        /* .navbar:hover::before {
+            width: 100%;
+            left: 0;
+            right: auto;
+
+        } */
+
+       
+
+    
+
+    </style>
+</head>
+<body>
+    <!-- <header id="main-header">
+        <div class="container">
+            <h1>Assignment Website</h1>
+        </div>
+
+    </header> -->
+
+    <div id="app">
+        <!-- {{message}} -->
+        <div class="navibar">
+
+            <p class = "navbar">
+                <!-- this is used for links -->
+                <router-link style ="color: white; text-decoration: none;" to="/">Home</router-link>
+                <router-link style ="color: white; text-decoration: none; word-spacing: normal;" to="/aboutme">About me</router-link>
+                <router-link style ="color: white; text-decoration: none; word-spacing: normal;" to="/ingredientchecklist">Ingredient Checklist</router-link>
+                <router-link style ="color: white; text-decoration: none; word-spacing: normal;" to="/cocktailgenerator">Cocktail Generator</router-link>
+                <router-link style ="color: white; text-decoration: none; word-spacing: normal;" to="/contactme">Contact me</router-link>
+            </p>
+           
+    <!-- to add top search bar -->
+             <!-- <div style="padding-top: 1em">
+                search: <input type="text" style="width: 50%">
+                </div> -->
+               
+    <!-- place to show the content when the link is clicked-->
+            <router-view></router-view>
+        </div>
+      
+    </div>
+
+    <script>
+
+        const Component1 = {
+            template: 
+                `<div>
+                    <div class="homepagetitle">
+                        <h1>welcome to my portfolio website <br>
+                        cocktails!</h1>
+                    </div>
+
+                    <div class="homeimagestyle">
+                        <img src="https://cdn.diffords.com/contrib/encyclopedia/2020/03/5e833a2d7e17b.jpg">
+                    </div>
+
+                    
+                    <h2>This is a site where users can learn how to make cocktails with the 
+                    ingredients they have. <br> Users can also search cocktails from the 
+                    classic cocktail recipes and create a shopping list of the 
+                    ingredients needed</h2>
+
+                    <h3> This is a site where users can learn how to make cocktails with the 
+                    ingredients they have. <br> Users can also search cocktails from the 
+                    classic cocktail recipes and create a shopping list of the 
+                    ingredients needed </h3>
+                    
+
+                </div>`} 
+
+        const Component2 = {template: 
+                `<div>
+                    <div class="homepagetitle">
+                        <h1>About me</h1>
+                    </div>
+                    <div class="bodystyle">
+                        <h2>This section is for a description about me and my project</h2>
+                    </div>
+                    
+                 </div>`}  
+
+        const Component3 = {template: 
+                `<div>
+                    <div class="homepagetitle">
+                        <h1>Contact me</h1>
+                    <div>
+                    <label>Name:</label>
+                    <input type="text">
+                    <label>Email:</label>
+                    <input type="text">
+                    <input type="button" value="Submit">
+
+                </div>`} 
+
+         const Component4 = {template: 
+                `<div>
+                    <div class="homepagetitle">
+                        <h1>Cocktail Generator</h1>
+                    </div>
+
+                    <h2>This section is to get a cocktail generated based on the spirits you already have, it will also show ingredients and preparation</h2>
+
+                </div>`}
+        
+        const Component5 = {template: 
+                `<div>
+                    <div class="homepagetitle">
+                        <h1>Ingredient Checklist</h1>
+                    </div>
+                    <h2>This section is to where a checklist can be created to keep track of ingredients needed for the desired cocktail</h2>
+                </div>`}
+               
+        const routes = [
+            {path: '/', component: Component1},
+            {path: '/aboutme', component: Component2},
+            {path: '/contactme', component: Component3},
+            {path: '/cocktailgenerator', component: Component4},
+            {path: '/ingredientchecklist', component: Component5},
+        ]
+
+        const router = new VueRouter ({
+            routes: routes
+        })
+
+        new Vue({
+            el: "#app",
+            data () {
+                return {
+                    message: "This is the Vue instance"
+                }
+            },
+            router: router
+        })
+    
+    </script>
+    <script src="Vue.js"></script>
+
+    <footer class="footer">
+        <div>
+            <h4>this is the footer</h4>
+            <nav>
+                <ul>
+                    <li><a href="homepage.html">Home</a></li>
+                    <li><a href="aboutme.htmlml">About me</a></li>
+                    <li><a href="contact me.html">Contact me</a></li>
+
+                </ul>
+            </nav>
+        </div>
+        
+    </footer>
+
+</body>
+
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ProjectAssigment3</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <script src="https://unpkg.com/vue-router@2.0.0/dist/vue-router.js"></script>
+</head>
+<body>
+    <div class="navbar">
+        <div class="container flex">
+            <h1 class="logo">Cocktails!</h1>
+            <nav>
+                <ul>
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="aboutme.html">About me</a></li>
+                    <li><a href="ingredientchecklist.html">Ingredient checklist</a></li>
+                    <li><a href="cocktailgenerator.html">Cocktail generator</a></li>
+                    <li><a href="contactme.html">Contact me</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+    <div>
+        <!-- <div class="homeimagestyle">
+            <img src="https://img.delicious.com.au/lQ1Ooo48/del/2017/11/summer-sorbet-cocktails-56724-1.jpg">
+        </div>
+        <div class="homeimagestyle">
+            <img src="https://cdn.concreteplayground.com/content/uploads/2016/05/PS40-Sydney-02-474x308.jpeg">
+        </div>
+        <div class="homeimagestyle">
+            <img src="https://img.thedailybeast.com/image/upload/c_crop,d_placeholder_euli9k,h_1440,w_2560,x_0,y_0/dpr_1.5/c_limit,w_1044/fl_lossy,q_auto/v1517521303/180131-wondrich-bad-cocktail-tease_wghhv8">
+        </div> -->
+
+        <div>
+            <h1>Please contact us!</h1>
+        </div>
+        <div>
+            <h2>Feel free to ask for recommendations or to share your own recipes!!</h2>
+            <br>
+            <br>
+            <h3>For daily recipes, please don't forget to subscribe to our website</h3>
+        </div>
+        <br>
+        <div class="contactform">
+            <label>Name:</label>
+            <input type="text">
+            <label>Email:</label>
+            <input type="text">
+            <input type="button" value="Submit">
+    
+        </div>
+    </div>
+    <div id="contactmevue">
+        {{message}}
+    </div>
+
+    <script>
+        var app = new Vue({
+            el: "#contactmevue",
+            data: {
+                message: "Hello Vue app1!"
+            }
+        })
+    </script>
+</body>
+</html>
+
+
+
+

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ProjectAssigment3</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <!-- <script src="https://unpkg.com/vue-router@2.0.0/dist/vue-router.js"></script> -->
+</head>
+<body>
+    <div class="navbar">
+        <div class="container flex">
+            <h1 class="logo">Cocktails!</h1>
+            <nav>
+                <ul>
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="aboutme.html">About me</a></li>
+                    <li><a href="ingredientchecklist.html">Ingredient checklist</a></li>
+                    <li><a href="cocktailgenerator.html">Cocktail generator</a></li>
+                    <li><a href="contactme.html">Contact me</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+    
+    <div>
+        <div class="homeimagestyle">
+            <img src="https://mixologycrew.com/wp-content/uploads/2019/02/mojito-recipe-1024x509.jpg">
+        </div>
+        <div>
+            <h2>Add the items you need here!</h2>
+        </div>
+    </div>
+   <!-- Vue data list -->
+   <div id="homevue">
+    <h1>{{header}}</h1>
+
+    <ul>
+        <li v-for="ingredient in ingredients" :key="ingredient.id">{{ingredient.label}}</li>
+    </ul>
+    
+
+    </div>
+
+    <script src="https://unpkg.com/vue@3"></script>
+
+    <script>
+        const ingredientList = Vue.createApp({
+            data(){
+                return {
+                    header: "Ingredients List",
+                    ingredients: [
+                       {id: 1, label: "lemons"},
+                       {id: 2, label: "ice"},
+                       {id: 3, label: "ming"},
+                       {id: 4, label: "rum"},
+                    ]
+                }
+            }
+        })
+        .mount('#homevue')
+
+    </script>
+</body>
+</html>

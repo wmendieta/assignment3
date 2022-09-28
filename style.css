@@ -1,0 +1,136 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+body {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: black;
+    line-height: 1.5;
+    
+}
+
+ul {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+h1,h2, h3 {
+    font-weight: 300;
+    line-height: 1.2;
+    margin: 0 0;
+    padding: 20px;
+}
+
+p {
+    margin: 10px 0;
+}
+
+img {
+    width: 100%;
+    
+
+}
+
+.navbar {
+    background-color: black;
+    color: white;
+    height: 80px;
+}
+
+.navbar ul {
+    display: flex;
+}
+
+.navbar a {
+    padding: 10px;
+    margin: 0 5px;
+}
+
+.navbar a:hover {
+    border-top: 1px white solid;
+    /* background-color: darkgray; */
+   
+}
+
+.navbar .flex {
+    /* justify-content: space-between; */
+    justify-content: center;
+   
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    overflow: auto;
+    padding: 0 40px;
+}
+
+
+.flex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+
+}
+
+.datebutton {
+    padding: 40px;
+    align-items: center;
+    
+}
+
+.alertbutton {
+    padding: 40px;
+}
+
+.contactform {
+    padding: 40px;
+}
+
+
+
+
+/* .homeimagestyle {
+    margin: 0 auto;
+    padding: 0 10%;
+    max-width: 1000px;
+  
+} */
+
+/* .cocktailgeneratorimagestyle {
+   
+    margin: 0 auto;
+    padding: 0 10%;
+    max-width: 1000px;
+   
+} */
+
+
+
+
+
+@media (max-width: 420px) {
+    .iframe-container {
+        position: relative;
+        width: 50%;
+        padding-bottom: 50%;
+        height: 0;
+    }
+
+    .iframe-container iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+}
+@media (max-width: 980px) {
+
+}
